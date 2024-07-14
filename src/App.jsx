@@ -24,10 +24,10 @@ function App() {
               {
                 elements: [
                   <span key={21} className="material-symbols-outlined">
-                    work
+                    computer
                   </span>,
                   <p key={22} className="text-2xl">
-                    Experience
+                    Skills
                   </p>,
                 ],
                 to: "/experience",

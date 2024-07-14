@@ -6,14 +6,14 @@ import ContactInfo from "../ContactInfo";
 
 const variants = {
   open: { width: "200px", opacity: 1 },
-  closed: { width: "75px", opacity: 0.9 },
+  closed: { width: "55px", opacity: 0.9 },
   closedButton: { rotate: -90, scale: 0.8, y: 30 },
   openButton: { rotate: 0, scale: 1, y: 0 },
 };
 
 const imageVariants = {
   open: { opacity: 1, width: "120px", height: "180px" },
-  closed: { opacity: 0.9, width: "60px", height: "90px" },
+  closed: { opacity: 0.9, width: "45px", height: "90px" },
 };
 
 const transition = {
@@ -105,7 +105,9 @@ const SideNavigation = ({ content }) => {
             animate={isOpen ? "open" : "closed"}
             variants={variants}
             transition={transition}
-            className="mt-16 flex flex-col gap-2 justify-start w-full h-full overflow-hidden pl-3 select-none items-start"
+            className={`mt-16 flex flex-col gap-2 justify-start w-full h-full overflow-hidden select-none ${
+              isOpen ? "items-start pl-3" : "items-center"
+            }`}
           >
             {content.map((item) =>
               isOpen ? (
@@ -121,14 +123,18 @@ const SideNavigation = ({ content }) => {
                   <motion.div className="text-md cursor-pointer flex gap-1 ">{item.elements[1]}</motion.div>
                 </NavLink>
               ) : (
-                <motion.div key={item.elements[1].key} className="text-md  mx-3">
+                <motion.div key={item.elements[1].key} className="text-md">
                   {item.elements[0]}
                 </motion.div>
               )
             )}
           </motion.nav>
         </div>
-        {isOpen && <ContactInfo />}
+        {isOpen ? (
+          <ContactInfo />
+        ) : (
+          <span className="material-symbols-outlined cursor-pointer select-none">contacts</span>
+        )}
       </motion.header>
       {isOpen && <div className="w-full h-full backdrop-blur-sm z-10" />}
     </div>

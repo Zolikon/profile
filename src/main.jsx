@@ -7,6 +7,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Portfolio from "./portfolio/Portfolio.jsx";
 import AnimateComponent from "./components/AnimateComponent.jsx";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
+import AboutMe from "./aboutme/AboutMe.jsx";
+import Skills from "./skills/Skills.jsx";
+import PageNotFound from "./components/PageNotFound.jsx";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +20,7 @@ const router = createBrowserRouter([
         element: (
           <AnimateComponent key="home">
             <ProtectedRoute>
-              <div>About</div>
+              <AboutMe />
             </ProtectedRoute>
           </AnimateComponent>
         ),
@@ -27,7 +30,7 @@ const router = createBrowserRouter([
         element: (
           <AnimateComponent key="exp">
             <ProtectedRoute>
-              <div>Experience</div>
+              <Skills />
             </ProtectedRoute>
           </AnimateComponent>
         ),
@@ -38,6 +41,16 @@ const router = createBrowserRouter([
           <AnimateComponent key="portfolio">
             <ProtectedRoute>
               <Portfolio />
+            </ProtectedRoute>
+          </AnimateComponent>
+        ),
+      },
+      {
+        path: "*",
+        element: (
+          <AnimateComponent key="portfolio">
+            <ProtectedRoute>
+              <PageNotFound />
             </ProtectedRoute>
           </AnimateComponent>
         ),
