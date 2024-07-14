@@ -40,15 +40,17 @@ function NotARobotTest({ originalItemsOrder, isHappinessIncreasing, onSuccess })
 
   return (
     <div className="flex flex-col gap-8 items-center justify-center">
-      <p className="text-4xl">Create increasing {isHappinessIncreasing ? "happiness" : "saddness"}</p>
-      <Reorder.Group axis="x" values={items} onReorder={setItems} className="flex gap-6">
+      <p className="text-2xl sm:text-4xl text-center">
+        Create increasing {isHappinessIncreasing ? "happiness" : "saddness"}
+      </p>
+      <Reorder.Group axis="x" values={items} onReorder={setItems} className="flex gap-2 sm:gap-6">
         {items.map((item) => (
           <Reorder.Item key={item} value={item}>
-            <div className="text-6xl">{EMOJIS[item]}</div>
+            <div className=" text-xl sm:text-6xl">{EMOJIS[item]}</div>
           </Reorder.Item>
         ))}
       </Reorder.Group>
-      <button className="p-2 text-2xl" onClick={validateResult}>
+      <button className="p-2 text-md sm:text-2xl" onClick={validateResult}>
         Done
       </button>
     </div>
