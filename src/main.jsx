@@ -10,6 +10,7 @@ import ProtectedRoute from "./components/ProtectedRoute.jsx";
 import AboutMe from "./aboutme/AboutMe.jsx";
 import Skills from "./skills/Skills.jsx";
 import PageNotFound from "./components/PageNotFound.jsx";
+import MusicProject from "./portfolio/projects/MusicProject.jsx";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,16 @@ const router = createBrowserRouter([
           <AnimateComponent key="portfolio">
             <ProtectedRoute>
               <Portfolio />
+            </ProtectedRoute>
+          </AnimateComponent>
+        ),
+      },
+      {
+        path: "/portfolio/music",
+        element: (
+          <AnimateComponent key="music_project">
+            <ProtectedRoute>
+              <MusicProject />
             </ProtectedRoute>
           </AnimateComponent>
         ),

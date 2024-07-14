@@ -52,7 +52,6 @@ ProjectCard.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   image: PropTypes.string,
-  link: PropTypes.string.isRequired,
   language: PropTypes.string.isRequired,
 };
 

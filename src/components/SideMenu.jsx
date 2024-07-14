@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import ContactInfo from "../ContactInfo";
+import { useSignals } from "@preact/signals-react/runtime";
+import { contactIconShouldNotify } from "./signalManager";
 
 const variants = {
   open: { width: "200px", opacity: 1 },
@@ -16,6 +18,11 @@ const imageVariants = {
   closed: { opacity: 0.9, width: "45px", height: "90px" },
 };
 
+const contactIconVariants = {
+  idle: { opacity: 1, scale: 1 },
+  notify: { scale: [4, 1.5, 1], opacity: [0.2, 0.5, 1], duration: 0.7 },
+};
+
 const transition = {
   type: "tween",
   duration: 0.5,
@@ -23,6 +30,7 @@ const transition = {
 
 const SideNavigation = ({ content }) => {
   const [isOpen, setIsOpen] = useState(false);
+  useSignals();
 
   const node = useRef();
 
@@ -133,7 +141,17 @@ const SideNavigation = ({ content }) => {
         {isOpen ? (
           <ContactInfo />
         ) : (
-          <span className="material-symbols-outlined cursor-pointer select-none">contacts</span>
+          <motion.span
+            className="material-symbols-outlined cursor-pointer select-none"
+            variants={contactIconVariants}
+            initial="idle"
+            animate={contactIconShouldNotify.value ? "notify" : "idle"}
+            onAnimationComplete={() => {
+              contactIconShouldNotify.value = false;
+            }}
+          >
+            contacts
+          </motion.span>
         )}
       </motion.header>
       {isOpen && <div className="w-full h-full backdrop-blur-sm z-10" />}
