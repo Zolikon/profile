@@ -11,6 +11,11 @@ import AboutMe from "./aboutme/AboutMe.jsx";
 import Skills from "./skills/Skills.jsx";
 import PageNotFound from "./components/PageNotFound.jsx";
 import MusicProject from "./portfolio/projects/MusicProject.jsx";
+import TextMageProject from "./portfolio/projects/TextMageProject.jsx";
+import PdfMageProject from "./portfolio/projects/PdfMageProject.jsx";
+import VoiceNoteProject from "./portfolio/projects/VoiceNoteProject.jsx";
+import SnakeProject from "./portfolio/projects/SnakeProject.jsx";
+import MinesweeperProject from "./portfolio/projects/MinesweeperProject.jsx";
 
 const router = createBrowserRouter([
   {
@@ -52,6 +57,56 @@ const router = createBrowserRouter([
           <AnimateComponent key="music_project">
             <ProtectedRoute>
               <MusicProject />
+            </ProtectedRoute>
+          </AnimateComponent>
+        ),
+      },
+      {
+        path: "/portfolio/textmage",
+        element: (
+          <AnimateComponent key="textmage_project">
+            <ProtectedRoute>
+              <TextMageProject />
+            </ProtectedRoute>
+          </AnimateComponent>
+        ),
+      },
+      {
+        path: "/portfolio/pdfmage",
+        element: (
+          <AnimateComponent key="pdfmage_project">
+            <ProtectedRoute>
+              <PdfMageProject />
+            </ProtectedRoute>
+          </AnimateComponent>
+        ),
+      },
+      {
+        path: "/portfolio/voicenote",
+        element: (
+          <AnimateComponent key="voicenote_project">
+            <ProtectedRoute>
+              <VoiceNoteProject />
+            </ProtectedRoute>
+          </AnimateComponent>
+        ),
+      },
+      {
+        path: "/portfolio/snake",
+        element: (
+          <AnimateComponent key="snake_project">
+            <ProtectedRoute>
+              <SnakeProject />
+            </ProtectedRoute>
+          </AnimateComponent>
+        ),
+      },
+      {
+        path: "/portfolio/minesweeper",
+        element: (
+          <AnimateComponent key="minesweeper_project">
+            <ProtectedRoute>
+              <MinesweeperProject />
             </ProtectedRoute>
           </AnimateComponent>
         ),

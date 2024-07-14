@@ -6,8 +6,8 @@ import ColorThemeSelector from "./components/ColorThemeSelector";
 function App() {
   return (
     <>
-      <div className="flex h-full w-full bg-gradient-to-b from-light-bg-from to-light-bg-to dark:from-dark-bg-from dark:to-dark-bg-to text-light-text dark:text-dark-text">
-        <header className="h-full w-32 flex items-center justify-center">
+      <div className="flex h-full w-full bg-gradient-to-b relative from-light-bg-from to-light-bg-to dark:from-dark-bg-from dark:to-dark-bg-to text-light-text dark:text-dark-text">
+        <header className="h-full flex w-14 items-center justify-center">
           <SideNavigation
             content={[
               {
@@ -46,7 +46,7 @@ function App() {
             ]}
           />
         </header>
-        <main className="flex flex-col flex-grow p-2 ">
+        <main className=" flex items-center justify-center mx-[60px] w-full">
           <AnimatePresence>
             <Outlet />
           </AnimatePresence>

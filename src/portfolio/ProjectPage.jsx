@@ -1,8 +1,10 @@
 import PropTypes from "prop-types";
 import { useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function ProjectPage({ name, description, skills, github, projectLink, images = [] }) {
   const dialogRef = useRef(null);
+  const navigate = useNavigate();
   const [selectedImage, setSelectedImage] = useState(0);
 
   function openImageViewer(index) {
@@ -16,8 +18,13 @@ function ProjectPage({ name, description, skills, github, projectLink, images = 
 
   return (
     <>
-      <div className="flex flex-col gap-2 items-center justify-between h-4/5">
+      <div className="flex flex-col gap-2 items-center justify-between h-4/5 relative">
         <h1 className="text-4xl font-bold">{name}</h1>
+        <button className="absolute top-0 right-0">
+          <span className="material-symbols-outlined text-2xl" onClick={() => navigate(-1)}>
+            arrow_back
+          </span>
+        </button>
         <p className="text-xl">{description}</p>
         <div className="flex flex-col  items-center gap-2">
           <p className="text-xl">Technologies used:</p>
@@ -35,8 +42,9 @@ function ProjectPage({ name, description, skills, github, projectLink, images = 
               href={github}
               target="_blank"
               rel="noreferrer"
-              className="p-2 bg-teal-500 dark:bg-cyan-400 dark:text-stone-600 rounded-md"
+              className="p-2 bg-teal-500 dark:bg-cyan-400 dark:text-stone-600 rounded-md hover:scale-105 transition-all flex justify-center gap-1"
             >
+              <span className="material-symbols-outlined">open_in_new</span>
               Repository
             </a>
           )}
@@ -45,8 +53,9 @@ function ProjectPage({ name, description, skills, github, projectLink, images = 
               href={projectLink}
               target="_blank"
               rel="noreferrer"
-              className="p-2 bg-teal-500 dark:bg-cyan-400 dark:text-stone-600 rounded-md"
+              className="p-2 bg-teal-500 dark:bg-cyan-400 dark:text-stone-600 rounded-md hover:scale-105 transition-all flex justify-center gap-1"
             >
+              <span className="material-symbols-outlined">open_in_new</span>
               Live version
             </a>
           )}
@@ -58,7 +67,7 @@ function ProjectPage({ name, description, skills, github, projectLink, images = 
               onClick={() => openImageViewer(index)}
               src={image}
               alt="project image"
-              className="rounded-xl object-contain w-4/5 h-4/5 cursor-pointer"
+              className="rounded-xl object-contain w-4/5 h-4/5 cursor-pointer hover:scale-105 transition-all"
             />
           ))}
         </div>
