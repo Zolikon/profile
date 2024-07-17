@@ -18,14 +18,17 @@ function ProjectPage({ name, description, skills, github, projectLink, images = 
 
   return (
     <>
-      <div className="flex flex-col gap-2 items-center justify-between h-4/5 relative">
-        <h1 className="text-4xl font-bold">{name}</h1>
-        <button className="absolute top-0 right-0">
-          <span className="material-symbols-outlined text-2xl" onClick={() => navigate(-1)}>
-            arrow_back
-          </span>
-        </button>
-        <p className="text-xl">{description}</p>
+      <div className="flex flex-col gap-2 items-center justify-between h-4/5 w-[90%]">
+        <div className="flex gap-3">
+          <button className="">
+            <span className="material-symbols-outlined text-2xl" onClick={() => navigate(-1)}>
+              arrow_back
+            </span>
+          </button>
+          <h1 className="text-xl sm:text-4xl font-bold">{name}</h1>
+        </div>
+
+        <p className="text-sm sm:text-xl">{description}</p>
         <div className="flex flex-col  items-center gap-2">
           <p className="text-xl">Technologies used:</p>
           <div className="flex gap-2">
@@ -73,7 +76,7 @@ function ProjectPage({ name, description, skills, github, projectLink, images = 
         </div>
       </div>
       <dialog ref={dialogRef}>
-        <div className="flex flex-col w-[80vw] h-[80vh] items-center justify-center gap-4 bg-light-bg-to dark:bg-dark-bg-to">
+        <div className="flex flex-col w-[90vw] h-[90vh] items-center justify-center gap-4 bg-light-bg-to dark:bg-dark-bg-to">
           <img
             src={images[selectedImage]}
             alt="project image"

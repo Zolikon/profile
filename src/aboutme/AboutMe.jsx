@@ -1,4 +1,3 @@
-import { contactIconShouldNotify } from "../components/signalManager";
 import { useSignals } from "@preact/signals-react/runtime";
 
 function AboutMe() {
@@ -23,14 +22,6 @@ function AboutMe() {
           className=" disabled:bg-gray-600 bg-green-800 disabled:dark:bg-slate-400 dark:bg-slate-600 text-slate-200 dark:text-slate-200 p-2 rounded-md disabled:cursor-not-allowed"
         >
           Download CV
-        </button>
-        <button
-          className="disabled:bg-gray-600 bg-green-800 disabled:dark:bg-slate-400 dark:bg-slate-600 text-slate-200 dark:text-slate-200 p-2 rounded-md disabled:cursor-not-allowed"
-          onClick={() => {
-            if (!contactIconShouldNotify.value) contactIconShouldNotify.value = true;
-          }}
-        >
-          Contact me
         </button>
       </div>
     </div>

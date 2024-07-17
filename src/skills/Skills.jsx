@@ -15,9 +15,9 @@ function Skills() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center gap-4">
-      <p className="text-6xl flex items-center justify-center">Skills</p>
-      <div className="flex gap-2 items-center justify-center">
+    <div className="flex flex-col items-center justify-center gap-4 my-4">
+      <p className="text-4xl sm:text-6xl flex items-center justify-center">Skills</p>
+      <div className="flex  sm:gap-2 items-center justify-center text-xs sm:text-xl">
         <button
           onClick={() => toggleSelectedTag(TAGS.backend)}
           className={` p-2 font-bold rounded-md ${selectedTag == TAGS.backend && "bg-green-500 dark:bg-purple-400"}`}
@@ -41,6 +41,7 @@ function Skills() {
         <SkillIcon skillName="Java" level={5} tags={[TAGS.backend]} selectedTag={selectedTag} />
         <SkillIcon skillName="Python" level={4} tags={[TAGS.backend]} selectedTag={selectedTag} />
         <SkillIcon skillName="Leadership" level={5} tags={[TAGS.general]} selectedTag={selectedTag} />
+        <SkillIcon skillName="AI" level={4} tags={[TAGS.backend]} selectedTag={selectedTag} />
         <SkillIcon skillName="JavaScript" level={4} tags={[TAGS.backend, TAGS.frontend]} selectedTag={selectedTag} />
         <SkillIcon skillName="React" level={5} tags={[TAGS.frontend]} selectedTag={selectedTag} />
         <SkillIcon skillName="Angular" level={3} tags={[TAGS.frontend]} selectedTag={selectedTag} />

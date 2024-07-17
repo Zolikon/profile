@@ -2,7 +2,7 @@ import ProjectCard from "./ProjectCard";
 
 function Portfolio() {
   return (
-    <div className="flex gap-4 h-full w-full overflow-y-auto flex-wrap items-center justify-center">
+    <div className="flex gap-4 h-[90%] w-full overflow-y-auto flex-wrap items-center justify-center my-4">
       <ProjectCard name="Music" description="First ever frontend project, a music player" image="/music_preview.png" />
       <ProjectCard
         name="TextMage"

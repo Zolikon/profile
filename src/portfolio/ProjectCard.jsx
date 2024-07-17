@@ -14,7 +14,7 @@ function ProjectCard({ name, description, image }) {
   return (
     <NavLink to={name.toLowerCase()} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
       <motion.div
-        className={`relative w-[200px] h-[200px] md:w-[280px] md:h-[280px] bg-yellow-400 rounded-2xl border-stone-500 border-2 m-2 p-2 flex flex-col justify-center items-center dark:text-stone-700`}
+        className={`relative w-[120px] h-[120px] md:w-[280px] md:h-[280px] bg-yellow-400 rounded-2xl border-stone-500 border-2 m-2 p-2 flex flex-col justify-center items-center dark:text-stone-700`}
         animate={isHovered ? "back" : "front"}
         variants={variants}
         transition={isHovered ? { duration: 0.5 } : { duration: 0.3 }}
@@ -25,7 +25,7 @@ function ProjectCard({ name, description, image }) {
           className="absolute w-full h-full flex flex-col justify-center "
           style={{ backfaceVisibility: "hidden" }}
         >
-          <p className="text-2xl sm:text-4xl font-bold select-none w-full text-center">{name}</p>
+          <p className="text-sm sm:text-4xl font-bold select-none w-full text-center">{name}</p>
         </motion.div>
 
         {/* Back of the Card */}

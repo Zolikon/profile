@@ -7,9 +7,9 @@ function SkillIcon({ skillName, level, tags, selectedTag }) {
 
   return (
     <div
-      className={`flex gap-2 items-center justify-between w-[250px] hover:border-2 dark:border-stone-200 border-stone-500 p-2 rounded-md select-none ${
+      className={`flex gap-2 items-center justify-between w-[200px] sm:w-[250px] hover:border-2 dark:border-stone-200 border-stone-500 p-2 rounded-md select-none ${
         isSelectedTag() && "bg-green-500 dark:bg-purple-400"
-      }`}
+      } text-xs sm:text-xl`}
     >
       <div className="font-bold">{skillName}</div>
       <div className="flex gap-1">

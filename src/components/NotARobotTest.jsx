@@ -26,22 +26,17 @@ export function randomBoolean() {
 function NotARobotTest({ originalItemsOrder, isHappinessIncreasing, onSuccess }) {
   const [items, setItems] = useState(originalItemsOrder);
 
-  function validateResult() {
-    const isCorrect = isHappinessIncreasing
+  function isCorrectOrder() {
+    return isHappinessIncreasing
       ? items.every((item, index) => item === index)
       : items.every((item, index) => item === 5 - index);
-
-    if (isCorrect) {
-      onSuccess();
-    } else {
-      alert("Please try again");
-    }
   }
 
   return (
     <div className="flex flex-col gap-8 items-center justify-center">
-      <p className="text-2xl sm:text-4xl text-center">
-        Create increasing {isHappinessIncreasing ? "happiness" : "saddness"}
+      <p className="text-2xl sm:text-4xl text-center">Prove that you are not a 🤖 and understand 🧑‍💼/👩‍💼 emotions</p>
+      <p className="text-2xl sm:text-2xl text-center">
+        Drag them around and create increasing {isHappinessIncreasing ? "happiness" : "saddness"}
       </p>
       <Reorder.Group axis="x" values={items} onReorder={setItems} className="flex gap-2 sm:gap-6">
         {items.map((item) => (
@@ -50,9 +45,13 @@ function NotARobotTest({ originalItemsOrder, isHappinessIncreasing, onSuccess })
           </Reorder.Item>
         ))}
       </Reorder.Group>
-      <button className="p-2 text-md sm:text-2xl" onClick={validateResult}>
-        Done
-      </button>
+      {isCorrectOrder() ? (
+        <button className="p-2 text-md sm:text-2xl h-4" onClick={onSuccess}>
+          Enter
+        </button>
+      ) : (
+        <div className="h-4" />
+      )}
     </div>
   );
 }
