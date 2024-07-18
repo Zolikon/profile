@@ -3,7 +3,9 @@ import { useLocalStorage } from "../useLocalStorage";
 
 function ColorThemeSelector() {
   const [isDarkFromPreviousSession, storeIsDarkForFuture] = useLocalStorage("darkMode");
-  const [isDark, setIsDark] = useState(isDarkFromPreviousSession());
+  const [isDark, setIsDark] = useState(
+    isDarkFromPreviousSession() || document.documentElement.classList.contains("dark")
+  );
   document.documentElement.classList.toggle("dark", isDark);
 
   function toggleDarkMode() {

@@ -69,7 +69,7 @@ const SideNavigation = ({ content }) => {
         onClick={() => {
           if (!isOpen) openMenu();
         }}
-        className="bg-gradient-to-b from-light-side-from to-light-side-to dark:from-dark-side-from dark:to-dark-side-to text-light-text dark:text-dark-text p-4  h-4/5 my-auto flex flex-col justify-between items-center rounded-r-2xl"
+        className="bg-gradient-to-b from-light-side-from to-light-side-to dark:from-dark-side-from dark:to-dark-side-to text-light-text dark:text-dark-text p-4 h-[550px] sm:h-4/5 my-auto flex flex-col justify-between items-center rounded-r-2xl"
       >
         <div className="flex flex-col items-center justify-start w-full h-full">
           <motion.div
@@ -79,7 +79,7 @@ const SideNavigation = ({ content }) => {
           >
             {isOpen && (
               <motion.p
-                className=" whitespace-nowrap text-xl font-bold"
+                className=" whitespace-nowrap text-sm sm:text-xl font-bold"
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.5 }}

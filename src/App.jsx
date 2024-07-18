@@ -15,7 +15,7 @@ function App() {
                   <span key={11} className="material-symbols-outlined">
                     person
                   </span>,
-                  <p key={12} className="text-2xl">
+                  <p key={12} className="text-lg sm:text-2xl">
                     About
                   </p>,
                 ],
@@ -26,7 +26,7 @@ function App() {
                   <span key={21} className="material-symbols-outlined">
                     computer
                   </span>,
-                  <p key={22} className="text-2xl">
+                  <p key={22} className="text-lg sm:text-2xl">
                     Skills
                   </p>,
                 ],
@@ -37,7 +37,7 @@ function App() {
                   <span key={31} className="material-symbols-outlined">
                     code_blocks
                   </span>,
-                  <p key={32} className="text-2xl">
+                  <p key={32} className="text-lg sm:text-2xl">
                     Portfolio
                   </p>,
                 ],
