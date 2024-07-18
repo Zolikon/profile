@@ -10,7 +10,7 @@ function ProtectedRoute({ children }) {
   if (!isNotARobot() || !success) {
     return (
       <NotARobotTest
-        originalItemsOrder={shuffleArray([0, 1, 2, 3, 4, 5])}
+        originalItemsOrder={shuffleArray([0, 1, 2, 3, 4])}
         isHappinessIncreasing={randomBoolean()}
         onSuccess={() => {
           saveAsNotARobot(true);

@@ -12,10 +12,10 @@ function App() {
             content={[
               {
                 elements: [
-                  <span key={11} className="material-symbols-outlined">
+                  <span key={11} className="text-sm sm:text-lg md:text-2xl material-symbols-outlined">
                     person
                   </span>,
-                  <p key={12} className="text-lg sm:text-2xl">
+                  <p key={12} className="text-sm sm:text-lg md:text-2xl">
                     About
                   </p>,
                 ],
@@ -23,10 +23,10 @@ function App() {
               },
               {
                 elements: [
-                  <span key={21} className="material-symbols-outlined">
+                  <span key={21} className="text-sm sm:text-lg md:text-2xl material-symbols-outlined">
                     computer
                   </span>,
-                  <p key={22} className="text-lg sm:text-2xl">
+                  <p key={22} className="text-sm sm:text-lg md:text-2xl">
                     Skills
                   </p>,
                 ],
@@ -34,10 +34,10 @@ function App() {
               },
               {
                 elements: [
-                  <span key={31} className="material-symbols-outlined">
+                  <span key={31} className="text-sm sm:text-lg md:text-2xl material-symbols-outlined">
                     code_blocks
                   </span>,
-                  <p key={32} className="text-lg sm:text-2xl">
+                  <p key={32} className="text-sm sm:text-lg md:text-2xl">
                     Projects
                   </p>,
                 ],

@@ -5,10 +5,9 @@ import PropTypes from "prop-types";
 const EMOJIS = {
   0: "😭",
   1: "😟",
-  2: "🫤",
-  3: "😐",
-  4: "🙂",
-  5: "😁",
+  2: "😐",
+  3: "🙂",
+  4: "😁",
 };
 
 export function shuffleArray(array) {
@@ -29,7 +28,7 @@ function NotARobotTest({ originalItemsOrder, isHappinessIncreasing, onSuccess })
   function isCorrectOrder() {
     return isHappinessIncreasing
       ? items.every((item, index) => item === index)
-      : items.every((item, index) => item === 5 - index);
+      : items.every((item, index) => item === items.length - 1 - index);
   }
 
   return (

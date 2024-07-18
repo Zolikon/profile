@@ -91,7 +91,7 @@ const SideNavigation = ({ content }) => {
             <img src="/profil.jpg" alt="profile" className={` rounded-full mb-4 mt-2`} />
           </motion.div>
           <motion.button
-            className="bg-red-500 hover:bg-red-700 font-bold py-2 px-4 rounded select-none text-stone-200"
+            className="bg-red-500 hover:bg-red-700 font-bold py-1 px-4 rounded select-none text-stone-200"
             onClick={toggleIsOpen}
             variants={variants}
             initial="closedButton"
@@ -105,7 +105,7 @@ const SideNavigation = ({ content }) => {
             animate={isOpen ? "open" : "closed"}
             variants={variants}
             transition={transition}
-            className={`mt-16 flex flex-col gap-2 justify-start w-full h-full overflow-hidden select-none ${
+            className={`mt-12 sm:mt-16 flex flex-col gap-2 justify-start w-full h-full overflow-hidden select-none ${
               isOpen ? "items-start pl-3" : "items-center"
             }`}
           >
@@ -133,7 +133,9 @@ const SideNavigation = ({ content }) => {
         {isOpen ? (
           <ContactInfo />
         ) : (
-          <span className="material-symbols-outlined cursor-pointer select-none">contacts</span>
+          <span className="material-symbols-outlined cursor-pointer select-none text-sm sm:text-lg md:text-2xl">
+            contacts
+          </span>
         )}
       </motion.header>
       {isOpen && <div className="w-full h-full backdrop-blur-sm z-10" />}
