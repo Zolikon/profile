@@ -30,7 +30,7 @@ function App() {
                     Skills
                   </p>,
                 ],
-                to: "/experience",
+                to: "/skills",
               },
               {
                 elements: [
@@ -38,10 +38,10 @@ function App() {
                     code_blocks
                   </span>,
                   <p key={32} className="text-lg sm:text-2xl">
-                    Portfolio
+                    Projects
                   </p>,
                 ],
-                to: "/portfolio",
+                to: "/projects",
               },
             ]}
           />

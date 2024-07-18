@@ -32,7 +32,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/experience",
+        path: "/skills",
         element: (
           <AnimateComponent key="exp">
             <ProtectedRoute>
@@ -42,9 +42,9 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/portfolio",
+        path: "/projects",
         element: (
-          <AnimateComponent key="portfolio">
+          <AnimateComponent key="projects">
             <ProtectedRoute>
               <Portfolio />
             </ProtectedRoute>
@@ -52,7 +52,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/portfolio/music",
+        path: "/projects/music",
         element: (
           <AnimateComponent key="music_project">
             <ProtectedRoute>
@@ -62,7 +62,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/portfolio/textmage",
+        path: "/projects/textmage",
         element: (
           <AnimateComponent key="textmage_project">
             <ProtectedRoute>
@@ -72,7 +72,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/portfolio/pdfmage",
+        path: "/projects/pdfmage",
         element: (
           <AnimateComponent key="pdfmage_project">
             <ProtectedRoute>
@@ -82,7 +82,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/portfolio/voicenote",
+        path: "/projects/voicenote",
         element: (
           <AnimateComponent key="voicenote_project">
             <ProtectedRoute>
@@ -92,7 +92,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/portfolio/snake",
+        path: "/projects/snake",
         element: (
           <AnimateComponent key="snake_project">
             <ProtectedRoute>
@@ -102,7 +102,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/portfolio/minesweeper",
+        path: "/projects/minesweeper",
         element: (
           <AnimateComponent key="minesweeper_project">
             <ProtectedRoute>
