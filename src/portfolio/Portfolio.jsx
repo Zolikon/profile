@@ -16,6 +16,7 @@ function Portfolio() {
         image="/voicenote_preview.png"
       />
       <ProjectCard name="Snake" description="Snake game" image="/snake_preview.png" />
+      <ProjectCard name="TaleMage" description="AI-supported tale generator" image="/talemage_preview.png" />
       <ProjectCard name="Minesweeper" description="Classic minesweeper" image="/minesweeper_preview.png" />
     </div>
   );

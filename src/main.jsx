@@ -16,6 +16,7 @@ import PdfMageProject from "./portfolio/projects/PdfMageProject.jsx";
 import VoiceNoteProject from "./portfolio/projects/VoiceNoteProject.jsx";
 import SnakeProject from "./portfolio/projects/SnakeProject.jsx";
 import MinesweeperProject from "./portfolio/projects/MinesweeperProject.jsx";
+import TalemageProject from "./portfolio/projects/TalemageProject.jsx";
 
 const router = createBrowserRouter([
   {
@@ -67,6 +68,16 @@ const router = createBrowserRouter([
           <AnimateComponent key="textmage_project">
             <ProtectedRoute>
               <TextMageProject />
+            </ProtectedRoute>
+          </AnimateComponent>
+        ),
+      },
+      {
+        path: "/projects/talemage",
+        element: (
+          <AnimateComponent key="talemage_project">
+            <ProtectedRoute>
+              <TalemageProject />
             </ProtectedRoute>
           </AnimateComponent>
         ),
