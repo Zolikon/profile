@@ -19,9 +19,12 @@ function ProjectPage({ name, description, skills, github, projectLink, images = 
   return (
     <>
       <div className="flex flex-col gap-2 items-center justify-between h-4/5 w-[90%]">
-        <div className="flex gap-3">
+        <div className="flex gap-3 items-center">
           <button className="">
-            <span className="material-symbols-outlined text-2xl" onClick={() => navigate(-1)}>
+            <span
+              className="material-symbols-outlined text-2xl bg-blue-600 dark:bg-slate-500  rounded-full w-12 h-12 flex items-center justify-center cursor-pointer hover:scale-105 transition-all"
+              onClick={() => navigate(-1)}
+            >
               arrow_back
             </span>
           </button>
@@ -63,14 +66,14 @@ function ProjectPage({ name, description, skills, github, projectLink, images = 
             </a>
           )}
         </div>
-        <div className="flex gap-2 items-center justify-center">
+        <div className="flex gap-2 items-center justify-center w-1/5">
           {images.map((image, index) => (
             <img
               key={image}
               onClick={() => openImageViewer(index)}
               src={image}
               alt="project image"
-              className="rounded-xl object-contain w-4/5 h-4/5 cursor-pointer hover:scale-105 transition-all"
+              className="rounded-xl object-contain h-[90%] aspect-square cursor-pointer hover:scale-105 transition-all"
             />
           ))}
         </div>

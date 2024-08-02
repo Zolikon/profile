@@ -14,7 +14,7 @@ function ProjectCard({ name, description, image }) {
   return (
     <NavLink to={name.toLowerCase()} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
       <motion.div
-        className={`relative w-[120px] h-[120px] md:w-[280px] md:h-[280px] bg-yellow-400 rounded-2xl border-stone-500 border-2 m-2 p-2 flex flex-col justify-center items-center dark:text-stone-700`}
+        className={`relative w-[120px] h-[120px] md:w-[280px] md:h-[280px] bg-gradient-to-br from-teal-700 dark:from-yellow-600 dark:to-stone-100 to-stone-200 rounded-2xl border-stone-500 border-2 m-2 p-2 flex flex-col justify-center items-center dark:text-stone-700`}
         animate={isHovered ? "back" : "front"}
         variants={variants}
         transition={isHovered ? { duration: 0.5 } : { duration: 0.3 }}
@@ -34,7 +34,7 @@ function ProjectCard({ name, description, image }) {
           style={{ backfaceVisibility: "hidden", rotateY: 180 }}
         >
           <img src={image} alt="project image" className="rounded-xl object-contain w-4/5 h-4/5" />
-          <p className="text-center">{description}</p>
+          <p className="text-center font-extrabold">{description}</p>
         </motion.div>
       </motion.div>
     </NavLink>

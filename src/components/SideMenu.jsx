@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import ContactInfo from "../ContactInfo";
 
 const variants = {
@@ -23,6 +23,7 @@ const transition = {
 
 const SideNavigation = ({ content }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const node = useRef();
 
@@ -114,7 +115,9 @@ const SideNavigation = ({ content }) => {
                 <NavLink
                   to={item.to}
                   key={item.elements[0].key}
-                  className="flex items-center mx-3 gap-2 hover:scale-110 transition-all"
+                  className={`flex items-center w-4/5 mx-3 gap-2 hover:scale-110 transition-all p-1 rounded-md ${
+                    location.pathname === item.to && "bg-blue-500"
+                  }`}
                   onClick={() => {
                     closeMenu();
                   }}
