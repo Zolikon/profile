@@ -35,9 +35,20 @@ function App() {
               {
                 elements: [
                   <span key={31} className="text-sm sm:text-lg md:text-2xl material-symbols-outlined">
-                    code_blocks
+                    license
                   </span>,
                   <p key={32} className="text-sm sm:text-lg md:text-2xl">
+                    Certs
+                  </p>,
+                ],
+                to: "/certs",
+              },
+              {
+                elements: [
+                  <span key={41} className="text-sm sm:text-lg md:text-2xl material-symbols-outlined">
+                    code_blocks
+                  </span>,
+                  <p key={42} className="text-sm sm:text-lg md:text-2xl">
                     Projects
                   </p>,
                 ],
@@ -46,7 +57,7 @@ function App() {
             ]}
           />
         </header>
-        <main className=" flex items-center justify-center mx-[30px] sm:mx-[60px] w-full">
+        <main className=" flex items-center justify-center mx-[45px] sm:mx-[60px] w-full">
           <AnimatePresence>
             <Outlet />
           </AnimatePresence>

@@ -17,6 +17,7 @@ import VoiceNoteProject from "./portfolio/projects/VoiceNoteProject.jsx";
 import SnakeProject from "./portfolio/projects/SnakeProject.jsx";
 import MinesweeperProject from "./portfolio/projects/MinesweeperProject.jsx";
 import TalemageProject from "./portfolio/projects/TalemageProject.jsx";
+import Certifications from "./certs/Certifications.jsx";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,16 @@ const router = createBrowserRouter([
           <AnimateComponent key="exp">
             <ProtectedRoute>
               <Skills />
+            </ProtectedRoute>
+          </AnimateComponent>
+        ),
+      },
+      {
+        path: "/certs",
+        element: (
+          <AnimateComponent key="certs">
+            <ProtectedRoute>
+              <Certifications />
             </ProtectedRoute>
           </AnimateComponent>
         ),

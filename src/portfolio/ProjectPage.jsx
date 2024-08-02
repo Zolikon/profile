@@ -30,8 +30,8 @@ function ProjectPage({ name, description, skills, github, projectLink, images = 
 
         <p className="text-sm sm:text-xl">{description}</p>
         <div className="flex flex-col  items-center gap-2">
-          <p className="text-xl">Technologies used:</p>
-          <div className="flex gap-2">
+          <p className="text-sm md:text-xl">Technologies used:</p>
+          <div className="flex flex-col md:flex-row gap-2">
             {skills.map((skill) => (
               <div key={skill} className="p-2 bg-green-500 dark:bg-purple-400 rounded-md select-none">
                 {skill}
@@ -39,7 +39,7 @@ function ProjectPage({ name, description, skills, github, projectLink, images = 
             ))}
           </div>
         </div>
-        <div className="flex gap-2">
+        <div className="flex flex-col md:flex-row gap-2">
           {github && (
             <a
               href={github}
