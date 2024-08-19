@@ -126,7 +126,13 @@ const SideNavigation = ({ content }) => {
                   <motion.div className="text-md cursor-pointer flex gap-1 ">{item.elements[1]}</motion.div>
                 </NavLink>
               ) : (
-                <motion.div key={item.elements[1].key} className="text-md">
+                <motion.div
+                  key={item.elements[1].key}
+                  className="text-md relative w-full flex items-center justify-center"
+                >
+                  {location.pathname === item.to && (
+                    <span className="w-[5px] h-full bg-blue-800 dark:bg-blue-500 absolute left-0 rounded-r-xl" />
+                  )}
                   {item.elements[0]}
                 </motion.div>
               )

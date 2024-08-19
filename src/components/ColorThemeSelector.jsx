@@ -20,9 +20,12 @@ function ColorThemeSelector() {
   return (
     <button
       onClick={toggleDarkMode}
-      className="w-8 h-8 sm:w-16 sm:h-16 fixed bottom-4 right-4 b rounded-full p-2 flex items-center justify-center bg-light-side-to hover:bg-light-side-from dark:bg-dark-side-to dark:hover:bg-light-side-from"
+      className="w-8 h-8 sm:w-16 sm:h-16 fixed bottom-4 right-4 b rounded-full p-2 flex 
+      items-center justify-center bg-light-side-to hover:bg-light-side-from dark:bg-dark-side-to dark:hover:bg-dark-side-from group"
     >
-      <span className="material-symbols-outlined text-xl sm:text-4xl">{isDark ? "light_mode" : "dark_mode"}</span>
+      <span className="material-symbols-outlined text-xl sm:text-4xl group-hover:scale-110 transition-all duration-300">
+        {isDark ? "light_mode" : "dark_mode"}
+      </span>
     </button>
   );
 }
