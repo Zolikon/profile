@@ -112,34 +112,42 @@ const SideNavigation = ({ content }) => {
             animate={isOpen ? "open" : "closed"}
             variants={variants}
             transition={transition}
-            className={`mt-12 sm:mt-16 flex flex-col gap-2 justify-start w-full h-full overflow-hidden select-none ${
-              isOpen ? "items-start pl-3" : "items-center"
-            }`}
+            className={`mt-12 sm:mt-16 flex flex-col gap-2 justify-start w-full h-full overflow-hidden select-none items-start`}
           >
             {content.map((item) =>
               isOpen ? (
-                <NavLink
-                  to={item.to}
-                  key={item.elements[0].key}
-                  className={`flex items-center w-4/5 mx-3 gap-2 hover:scale-110 transition-all p-1 rounded-md ${
-                    isPartOfCurrentPath(item.to) && "bg-blue-500"
-                  }`}
-                  onClick={() => {
-                    closeMenu();
-                  }}
-                >
-                  {item.elements[0]}
-                  <motion.div className="text-md cursor-pointer flex gap-1 ">{item.elements[1]}</motion.div>
-                </NavLink>
+                <motion.div key={item.elements[0].key} className="relative w-full flex items-center justify-center">
+                  <NavLink
+                    to={item.to}
+                    className={`flex items-center w-4/5 mx-3 gap-2 hover:scale-110 transition-all p-1 rounded-md z-10 ${
+                      isPartOfCurrentPath(item.to) && "dark:text-light-text text-dark-text"
+                    }`}
+                    onClick={() => {
+                      closeMenu();
+                    }}
+                  >
+                    {item.elements[0]}
+                    <motion.div className="text-md cursor-pointer flex gap-1 ">{item.elements[1]}</motion.div>
+                  </NavLink>
+                  {isPartOfCurrentPath(item.to) && (
+                    <span className="w-[90%] h-full bg-blue-800 dark:bg-blue-500 absolute left-0 rounded-r-xl z-0" />
+                  )}
+                </motion.div>
               ) : (
                 <motion.div
                   key={item.elements[1].key}
-                  className="text-md relative w-full flex items-center justify-center"
+                  className="text-md relative w-full flex items-center justify-center z-10"
                 >
                   {isPartOfCurrentPath(item.to) && (
-                    <span className="w-[5px] h-full bg-blue-800 dark:bg-blue-500 absolute left-0 rounded-r-xl" />
+                    <span className="w-full h-full bg-blue-800 dark:bg-blue-500 absolute left-0 z-0" />
                   )}
-                  {item.elements[0]}
+                  <span
+                    className={`z-10 flex items-center justify-center ${
+                      isPartOfCurrentPath(item.to) && "dark:text-light-text text-dark-text"
+                    }`}
+                  >
+                    {item.elements[0]}
+                  </span>
                 </motion.div>
               )
             )}
