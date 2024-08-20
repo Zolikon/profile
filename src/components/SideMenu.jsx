@@ -59,6 +59,12 @@ const SideNavigation = ({ content }) => {
     }
   };
 
+  function isPartOfCurrentPath(path) {
+    return (
+      (location.pathname === "/" && location.pathname === path) || (path !== "/" && location.pathname.startsWith(path))
+    );
+  }
+
   return (
     <div className={`flex fixed left-0 top-0 h-full ${isOpen && "w-full"} z-50`}>
       <motion.header
@@ -116,7 +122,7 @@ const SideNavigation = ({ content }) => {
                   to={item.to}
                   key={item.elements[0].key}
                   className={`flex items-center w-4/5 mx-3 gap-2 hover:scale-110 transition-all p-1 rounded-md ${
-                    location.pathname === item.to && "bg-blue-500"
+                    isPartOfCurrentPath(item.to) && "bg-blue-500"
                   }`}
                   onClick={() => {
                     closeMenu();
@@ -130,7 +136,7 @@ const SideNavigation = ({ content }) => {
                   key={item.elements[1].key}
                   className="text-md relative w-full flex items-center justify-center"
                 >
-                  {location.pathname === item.to && (
+                  {isPartOfCurrentPath(item.to) && (
                     <span className="w-[5px] h-full bg-blue-800 dark:bg-blue-500 absolute left-0 rounded-r-xl" />
                   )}
                   {item.elements[0]}
