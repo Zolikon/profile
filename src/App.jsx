@@ -23,6 +23,17 @@ function App() {
               },
               {
                 elements: [
+                  <span key={"career1"} className="text-sm sm:text-lg md:text-2xl material-symbols-outlined">
+                    route
+                  </span>,
+                  <p key={"career2"} className="text-sm sm:text-lg md:text-2xl">
+                    Career
+                  </p>,
+                ],
+                to: "/career",
+              },
+              {
+                elements: [
                   <span key={21} className="text-sm sm:text-lg md:text-2xl material-symbols-outlined">
                     computer
                   </span>,

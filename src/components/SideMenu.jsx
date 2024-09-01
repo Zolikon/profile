@@ -98,7 +98,7 @@ const SideNavigation = ({ content }) => {
             <img src="/profil.jpg" alt="profile" className={` rounded-full mb-4 mt-2`} />
           </motion.div>
           <motion.button
-            className="bg-red-500 hover:bg-red-700 font-bold py-1 px-4 rounded select-none text-stone-200"
+            className="bg-red-500 hover:bg-red-700 dark:bg-yellow-500 dark:hover:bg-yellow-700 dark:text-light-text font-bold py-1 px-4 rounded select-none text-dark-text"
             onClick={toggleIsOpen}
             variants={variants}
             initial="closedButton"
