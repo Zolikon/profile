@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 function Timeline() {
   return (
-    <div className="w-full py-10 overflow-y-auto">
+    <div className="w-full px-1 py-10 overflow-y-auto">
       <VerticalTimeline>
         <WorkElement
           date="2022 - present"
