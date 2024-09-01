@@ -112,7 +112,7 @@ const SideNavigation = ({ content }) => {
             animate={isOpen ? "open" : "closed"}
             variants={variants}
             transition={transition}
-            className={`mt-12 sm:mt-16 flex flex-col gap-2 justify-start w-full h-full overflow-hidden select-none items-start`}
+            className={`mt-12 sm:mt-16 flex flex-col gap-0 xl:gap-2 justify-start w-full h-full overflow-hidden select-none items-start`}
           >
             {content.map((item) =>
               isOpen ? (

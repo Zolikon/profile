@@ -18,7 +18,7 @@ function RotatingView({ elements }) {
     const interval = setInterval(() => {
       setCurrent((currentIndex) => (currentIndex + 1) % elements.length);
       setHasAnimated(true);
-    }, 3500);
+    }, 3000);
     return () => clearInterval(interval);
   }, [elements.length]);
 
