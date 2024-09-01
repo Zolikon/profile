@@ -18,7 +18,7 @@ import SnakeProject from "./portfolio/projects/SnakeProject.jsx";
 import MinesweeperProject from "./portfolio/projects/MinesweeperProject.jsx";
 import TalemageProject from "./portfolio/projects/TalemageProject.jsx";
 import Certifications from "./certs/Certifications.jsx";
-import CareerJourney from "./aboutme/CareerJourney.jsx";
+import CareerJourney from "./career/CareerJourney.jsx";
 
 const router = createBrowserRouter([
   {
