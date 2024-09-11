@@ -12,10 +12,10 @@ function App() {
             content={[
               {
                 elements: [
-                  <span key={11} className="text-sm sm:text-lg md:text-2xl material-symbols-outlined">
+                  <span key={11} className="text-sm sm:text-lg material-symbols-outlined">
                     person
                   </span>,
-                  <p key={12} className="text-sm sm:text-lg md:text-2xl">
+                  <p key={12} className="text-sm sm:text-lg font-bold">
                     About
                   </p>,
                 ],
@@ -23,10 +23,10 @@ function App() {
               },
               {
                 elements: [
-                  <span key={"career1"} className="text-sm sm:text-lg md:text-2xl material-symbols-outlined">
+                  <span key={"career1"} className="text-sm sm:text-lg material-symbols-outlined">
                     route
                   </span>,
-                  <p key={"career2"} className="text-sm sm:text-lg md:text-2xl">
+                  <p key={"career2"} className="text-sm sm:text-lg font-bold">
                     Career
                   </p>,
                 ],
@@ -34,10 +34,10 @@ function App() {
               },
               {
                 elements: [
-                  <span key={21} className="text-sm sm:text-lg md:text-2xl material-symbols-outlined">
+                  <span key={21} className="text-sm sm:text-lg material-symbols-outlined">
                     computer
                   </span>,
-                  <p key={22} className="text-sm sm:text-lg md:text-2xl">
+                  <p key={22} className="text-sm sm:text-lg font-bold">
                     Skills
                   </p>,
                 ],
@@ -45,10 +45,10 @@ function App() {
               },
               {
                 elements: [
-                  <span key={31} className="text-sm sm:text-lg md:text-2xl material-symbols-outlined">
+                  <span key={31} className="text-sm sm:text-lg material-symbols-outlined">
                     license
                   </span>,
-                  <p key={32} className="text-sm sm:text-lg md:text-2xl">
+                  <p key={32} className="text-sm sm:text-lg font-bold">
                     Certs
                   </p>,
                 ],
@@ -56,10 +56,10 @@ function App() {
               },
               {
                 elements: [
-                  <span key={41} className="text-sm sm:text-lg md:text-2xl material-symbols-outlined">
+                  <span key={41} className="text-sm sm:text-lg material-symbols-outlined">
                     code_blocks
                   </span>,
-                  <p key={42} className="text-sm sm:text-lg md:text-2xl">
+                  <p key={42} className="text-sm sm:text-lg font-bold">
                     Projects
                   </p>,
                 ],
