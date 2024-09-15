@@ -51,14 +51,6 @@ const SideNavigation = ({ content }) => {
     };
   }, [handleClickOutside]);
 
-  const toggleIsOpen = () => {
-    if (isOpen) {
-      closeMenu();
-    } else {
-      openMenu();
-    }
-  };
-
   function isPartOfCurrentPath(path) {
     return (
       (location.pathname === "/" && location.pathname === path) || (path !== "/" && location.pathname.startsWith(path))
@@ -98,24 +90,12 @@ const SideNavigation = ({ content }) => {
               )}
               <img src="/profil.jpg" alt="profile" className={` rounded-full mb-4 mt-2`} />
             </motion.div>
-            <motion.button
-              className="bg-red-500 hover:bg-red-700 dark:bg-teal-500 dark:hover:bg-teal-700 dark:text-light-text font-bold py-1 px-4 rounded select-none text-dark-text"
-              onClick={toggleIsOpen}
-              variants={variants}
-              initial="closedButton"
-              transition={transition}
-              animate={isOpen ? "openButton" : "closedButton"}
-            >
-              {isOpen ? "Close" : "Open"}
-            </motion.button>
             <motion.nav
               initial="closed"
               animate={isOpen ? "open" : "closed"}
               variants={variants}
               transition={transition}
-              className={`${
-                isOpen ? "mt-8 sm:mt-12" : "mt-12 sm:mt-16"
-              } flex flex-col gap-0 xl:gap-2 justify-start w-full h-full overflow-hidden select-none items-start`}
+              className={` flex flex-col gap-0 xl:gap-2 justify-start w-full h-full overflow-hidden select-none items-start`}
             >
               {content.map((item) =>
                 isOpen ? (
