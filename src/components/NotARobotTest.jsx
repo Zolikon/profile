@@ -33,20 +33,20 @@ function NotARobotTest({ originalItemsOrder, isHappinessIncreasing, onSuccess })
 
   return (
     <div className="flex flex-col gap-8 items-center justify-center">
-      <p className="text-2xl sm:text-4xl text-center">Prove that you are not a 🤖 and understand 🧑‍💼/👩‍💼 emotions</p>
+      <p className="text-3xl sm:text-6xl text-center bg-light-bg-from dark:bg-dark-bg-to p-2 py-3 rounded-lg"> ⛔🤖</p>
       <p className="text-2xl sm:text-2xl text-center">
         Drag them around and create increasing {isHappinessIncreasing ? "happiness" : "saddness"}
       </p>
-      <Reorder.Group axis="x" values={items} onReorder={setItems} className="flex gap-2 sm:gap-6">
+      <Reorder.Group axis="y" values={items} onReorder={setItems} className="flex flex-col gap-2 sm:gap-6">
         {items.map((item) => (
           <Reorder.Item key={item} value={item}>
-            <div className=" text-xl sm:text-6xl">{EMOJIS[item]}</div>
+            <div className=" text-6xl">{EMOJIS[item]}</div>
           </Reorder.Item>
         ))}
       </Reorder.Group>
       {isCorrectOrder() ? (
-        <button className="p-2 text-md sm:text-2xl h-4" onClick={onSuccess}>
-          Enter
+        <button className="p-2 text-6xl h-4" onClick={onSuccess}>
+          ✅
         </button>
       ) : (
         <div className="h-4" />
