@@ -20,3 +20,7 @@
   scrollbar-width: thin;
   scrollbar-color: #bae6fd #0c6690;
 }
+
+.hidden-scrollbar {
+  scrollbar-width: none;
+}

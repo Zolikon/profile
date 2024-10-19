@@ -2,10 +2,11 @@ import { AnimatePresence } from "framer-motion";
 import SideNavigation from "./components/SideMenu";
 import { Outlet } from "react-router-dom";
 import ColorThemeSelector from "./components/ColorThemeSelector";
+import { ChatProvider } from "./ChatContext";
 
 function App() {
   return (
-    <>
+    <ChatProvider>
       <div className="flex h-full w-full bg-gradient-to-b relative from-light-bg-from to-light-bg-to dark:from-dark-bg-from dark:to-dark-bg-to text-light-text dark:text-dark-text overflow-y-auto">
         <header className="h-full flex w-14 items-center justify-center">
           <SideNavigation
@@ -20,6 +21,17 @@ function App() {
                   </p>,
                 ],
                 to: "/",
+              },
+              {
+                elements: [
+                  <span key={91} className="text-sm sm:text-lg material-symbols-outlined">
+                    forum
+                  </span>,
+                  <p key={92} className="text-sm sm:text-lg font-bold">
+                    RobotMe
+                  </p>,
+                ],
+                to: "/robotme",
               },
               {
                 elements: [
@@ -75,7 +87,7 @@ function App() {
         </main>
       </div>
       <ColorThemeSelector />
-    </>
+    </ChatProvider>
   );
 }
 

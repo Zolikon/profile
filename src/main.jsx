@@ -19,6 +19,7 @@ import MinesweeperProject from "./portfolio/projects/MinesweeperProject.jsx";
 import TalemageProject from "./portfolio/projects/TalemageProject.jsx";
 import Certifications from "./certs/Certifications.jsx";
 import CareerJourney from "./career/CareerJourney.jsx";
+import RobotMe from "./chat/RobotMe.jsx";
 
 const router = createBrowserRouter([
   {
@@ -50,6 +51,16 @@ const router = createBrowserRouter([
           <AnimateComponent key="exp">
             <ProtectedRoute>
               <Skills />
+            </ProtectedRoute>
+          </AnimateComponent>
+        ),
+      },
+      {
+        path: "/robotme",
+        element: (
+          <AnimateComponent key="robot">
+            <ProtectedRoute>
+              <RobotMe />
             </ProtectedRoute>
           </AnimateComponent>
         ),
