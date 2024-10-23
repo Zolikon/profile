@@ -29,7 +29,7 @@ function RobotMe() {
 
   return (
     <div className="flex flex-col justify-start gap-4 items-center text-xs w-full h-full xl:text-sm py-6 pr-10 xl:pr-0">
-      <p className="text-6xl font-extrabold">RobotMe</p>
+      <p className="text-4xl sm:text-6xl font-bold">RobotMe</p>
       <div className="flex flex-col justify-end h-3/5 overflow-hidden w-full xl:w-2/3  mt-10 pl-2 xl:px-4  gap-2 custom-scrollbar">
         <AnimatePresence>
           {allMessages.map((message, index) => (
@@ -100,7 +100,9 @@ function RobotMe() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
           >
-            {"I'm mainly act as a proof of AI experties. Want to know more? Find contacts in the menu."}
+            {
+              "I might look smart and be fun to talk to but I'm just a shallow replacement of Zoltan. Feel free to reach out."
+            }
           </motion.p>
         )}
         {waitingForAnswer && (

@@ -19,12 +19,18 @@ function AboutMe() {
               "4+ years of experience in people management",
             ]}
           />
-          <div className="flex gap-2">
+          <div className="flex flex-col gap-2">
             <button
               onClick={() => navigate("/career")}
-              className=" disabled:bg-slate-400 bg-light-side-from  dark:bg-dark-side-to text-slate-200 dark:text-slate-200 p-2 rounded-md disabled:cursor-not-allowed w-[75px] xl:w-[200px] flex items-center justify-center gap-1"
+              className=" disabled:bg-slate-400 bg-light-side-from  dark:bg-dark-side-to text-slate-200 dark:text-slate-200 p-2 rounded-md disabled:cursor-not-allowed w-[75px] xl:w-[200px] flex items-center justify-center gap-1 hover:scale-105 transition-all"
             >
               Career journey
+            </button>
+            <button
+              onClick={() => navigate("/robotme")}
+              className=" disabled:bg-slate-400 bg-light-side-from  dark:bg-dark-side-to text-slate-200 dark:text-slate-200 p-2 rounded-md disabled:cursor-not-allowed w-[75px] xl:w-[200px] flex items-center justify-center gap-1 hover:scale-105 transition-all"
+            >
+              RobotMe
             </button>
             <button
               disabled
