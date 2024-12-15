@@ -15,7 +15,7 @@ function Skills() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center gap-4 my-4">
+    <div className="flex flex-col items-center justify-center gap-4 ml-6 xl:ml-0 xl:my-4">
       <p className="text-4xl sm:text-6xl flex items-center justify-center font-bold">Skills</p>
       <div className="flex  sm:gap-2 items-center justify-center text-xs sm:text-xl">
         <button

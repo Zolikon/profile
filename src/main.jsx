@@ -20,6 +20,7 @@ import TalemageProject from "./portfolio/projects/TalemageProject.jsx";
 import Certifications from "./certs/Certifications.jsx";
 import CareerJourney from "./career/CareerJourney.jsx";
 import RobotMe from "./chat/RobotMe.jsx";
+import WorkdeskProject from "./portfolio/projects/WorkdeskProject.jsx";
 
 const router = createBrowserRouter([
   {
@@ -151,6 +152,16 @@ const router = createBrowserRouter([
           <AnimateComponent key="minesweeper_project">
             <ProtectedRoute>
               <MinesweeperProject />
+            </ProtectedRoute>
+          </AnimateComponent>
+        ),
+      },
+      {
+        path: "/projects/workdesk",
+        element: (
+          <AnimateComponent key="workdesk_project">
+            <ProtectedRoute>
+              <WorkdeskProject />
             </ProtectedRoute>
           </AnimateComponent>
         ),

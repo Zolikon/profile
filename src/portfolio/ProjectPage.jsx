@@ -23,7 +23,7 @@ function ProjectPage({ name, description, skills, github, projectLink, images = 
           <button className="">
             <span
               className="material-symbols-outlined text-2xl bg-blue-600 dark:bg-slate-500  rounded-full w-12 h-12 flex items-center justify-center cursor-pointer hover:scale-105 transition-all"
-              onClick={() => navigate(-1)}
+              onClick={() => navigate("/projects")}
             >
               arrow_back
             </span>

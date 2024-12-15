@@ -10,6 +10,7 @@ function Portfolio() {
       <ProjectCard name="Snake" description="Snake game" image="/snake_preview.png" />
       <ProjectCard name="TaleMage" description="AI-supported tale generator" image="/talemage_preview.png" />
       <ProjectCard name="Minesweeper" description="Classic minesweeper" image="/minesweeper_preview.png" />
+      <ProjectCard name="Workdesk" description="Configuration collection" image="/workdesk_preview.png" />
     </div>
   );
 }
