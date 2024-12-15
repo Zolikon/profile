@@ -48,7 +48,7 @@ function RobotMe() {
       </div>
       <AnimatePresence>
         {displayInput && (
-          <div className="w-full flex flex-col items-center justify-center">
+          <div className="w-full flex flex-col items-center justify-center" key="suggestions">
             {allMessages.length === 0 && (
               <div className="flex pb-4 gap-4 items-center justify-start w-4/5">
                 <QuestionSuggestion key="q1" question="Tell me about yourself" onClick={submitSuggestions} />
@@ -66,6 +66,7 @@ function RobotMe() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5 }}
+              key="question"
             >
               <textarea
                 placeholder="Ask me anything"
@@ -172,7 +173,7 @@ function ChatMessage({ isHuman = false, message, links = [], typeMessage = false
           <p>Links:</p>
           {links.map(({ name, link }) => (
             <NavLink
-              key={link}
+              key={Math.random() + ""}
               to={link}
               className="text-stone-200 py-1 px-3 rounded-full bg-stone-500 hover:bg-stone-700"
             >

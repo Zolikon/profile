@@ -37,7 +37,7 @@ function Skills() {
           {TAGS.general.toUpperCase()}
         </button>
       </div>
-      <div className="flex flex-col items-start justify-center gap-1 h-[90%] overflow-y-auto">
+      <div className="flex flex-col items-start justify-center gap-1 h-[90%]">
         <SkillIcon skillName="Java" level={5} tags={[TAGS.backend]} selectedTag={selectedTag} />
         <SkillIcon skillName="Python" level={4} tags={[TAGS.backend]} selectedTag={selectedTag} />
         <SkillIcon skillName="Leadership" level={5} tags={[TAGS.general]} selectedTag={selectedTag} />
