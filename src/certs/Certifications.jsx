@@ -13,6 +13,11 @@ function Certifications() {
         imageLink="cert_oracle_gen_ai.png"
         link="https://catalog-education.oracle.com/pls/certview/sharebadge?id=A93A283539718B9EB317E51E69FAE2E6F5A5815122DA5A3288BA252B9B75DDE9"
       />
+      <CertIcon
+        name="Certified Foundations Associate"
+        imageLink="cert_oracle_foundations.png"
+        link="https://catalog-education.oracle.com/ords/certview/sharebadge?id=A93A283539718B9EB317E51E69FAE2E60D94450E8FE87F184E849488DE191DF2"
+      />
     </div>
   );
 }

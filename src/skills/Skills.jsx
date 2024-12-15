@@ -42,13 +42,11 @@ function Skills() {
         <SkillIcon skillName="Python" level={4} tags={[TAGS.backend]} selectedTag={selectedTag} />
         <SkillIcon skillName="Leadership" level={5} tags={[TAGS.general]} selectedTag={selectedTag} />
         <SkillIcon skillName="AWS" level={4} tags={[TAGS.general]} selectedTag={selectedTag} />
-        <SkillIcon skillName="AI" level={4} tags={[TAGS.backend]} selectedTag={selectedTag} />
-        <SkillIcon skillName="JavaScript" level={4} tags={[TAGS.backend, TAGS.frontend]} selectedTag={selectedTag} />
-        <SkillIcon skillName="React" level={5} tags={[TAGS.frontend]} selectedTag={selectedTag} />
-        <SkillIcon skillName="Node" level={3} tags={[TAGS.backend]} selectedTag={selectedTag} />
-        <SkillIcon skillName="TypeScript" level={3} tags={[TAGS.backend, TAGS.frontend]} selectedTag={selectedTag} />
-        <SkillIcon skillName="CSS" level={4} tags={[TAGS.frontend]} selectedTag={selectedTag} />
-        <SkillIcon skillName="HTML" level={5} tags={[TAGS.frontend]} selectedTag={selectedTag} />
+        <SkillIcon skillName="Oracle cloud" level={2} tags={[TAGS.general]} selectedTag={selectedTag} />
+        <SkillIcon skillName="Generative AI" level={4} tags={[TAGS.backend]} selectedTag={selectedTag} />
+        <SkillIcon skillName="ReactJs" level={5} tags={[TAGS.frontend]} selectedTag={selectedTag} />
+        <SkillIcon skillName="NodeJs" level={3} tags={[TAGS.backend]} selectedTag={selectedTag} />
+        <SkillIcon skillName="HTML/CSS" level={4} tags={[TAGS.frontend]} selectedTag={selectedTag} />
         <SkillIcon skillName="Docker" level={4} tags={[TAGS.backend]} selectedTag={selectedTag} />
         <SkillIcon skillName="Git" level={5} tags={[TAGS.general]} selectedTag={selectedTag} />
         <SkillIcon skillName="Testing" level={5} tags={[TAGS.general]} selectedTag={selectedTag} />
