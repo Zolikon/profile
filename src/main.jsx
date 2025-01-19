@@ -21,6 +21,7 @@ import Certifications from "./certs/Certifications.jsx";
 import CareerJourney from "./career/CareerJourney.jsx";
 import RobotMe from "./chat/RobotMe.jsx";
 import WorkdeskProject from "./portfolio/projects/WorkdeskProject.jsx";
+import FlowGeneratorProject from "./portfolio/projects/FlowGeneratorProject.jsx";
 
 const router = createBrowserRouter([
   {
@@ -167,6 +168,16 @@ const router = createBrowserRouter([
         ),
       },
       {
+        path: "/projects/flowgenerator",
+        element: (
+          <AnimateComponent key="flowgenerator_project">
+            <ProtectedRoute>
+              <FlowGeneratorProject />
+            </ProtectedRoute>
+          </AnimateComponent>
+        ),
+      },
+      {
         path: "*",
         element: (
           <AnimateComponent key="portfolio">
@@ -183,5 +194,5 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>
+  </React.StrictMode>,
 );

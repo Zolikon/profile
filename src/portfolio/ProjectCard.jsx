@@ -12,7 +12,11 @@ function ProjectCard({ name, description, image }) {
   };
 
   return (
-    <NavLink to={name.toLowerCase()} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+    <NavLink
+      to={name.toLowerCase().replace(" ", "")}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <motion.div
         className={`relative w-[120px] h-[120px] lg:w-[280px] lg:h-[280px] bg-gradient-to-br from-teal-700 dark:from-yellow-600 dark:to-stone-100 to-stone-200 rounded-2xl border-stone-500 border-2 m-2 p-2 flex flex-col justify-center items-center dark:text-stone-700`}
         animate={isHovered ? "back" : "front"}
