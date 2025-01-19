@@ -12,6 +12,12 @@ function ProjectPage({ name, description, skills, github, projectLink, images = 
     dialogRef.current.showModal();
   }
 
+  function handleOutsideClick(event) {
+    if (event.target === dialogRef.current) {
+      closeImageViewer();
+    }
+  }
+
   function closeImageViewer() {
     dialogRef.current.close();
   }
@@ -78,7 +84,7 @@ function ProjectPage({ name, description, skills, github, projectLink, images = 
           ))}
         </div>
       </div>
-      <dialog ref={dialogRef}>
+      <dialog ref={dialogRef} onClick={handleOutsideClick} className="rounded-xl">
         <div className="flex flex-col w-[90vw] h-[90vh] items-center justify-center gap-4 bg-light-bg-to dark:bg-dark-bg-to">
           <img
             src={images[selectedImage]}

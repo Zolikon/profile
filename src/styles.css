@@ -24,3 +24,8 @@
 .hidden-scrollbar {
   scrollbar-width: none;
 }
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
