@@ -17,8 +17,9 @@ const imageVariants = {
 };
 
 const transition = {
-  type: "tween",
-  duration: 0.5,
+  type: "spring",
+  bounce: 0.25,
+  duration: 0.7,
 };
 
 const SideNavigation = ({ content }) => {
@@ -41,7 +42,7 @@ const SideNavigation = ({ content }) => {
         closeMenu();
       }
     },
-    [node, closeMenu]
+    [node, closeMenu],
   );
 
   useEffect(() => {
@@ -134,7 +135,7 @@ const SideNavigation = ({ content }) => {
                       {item.elements[0]}
                     </span>
                   </motion.div>
-                )
+                ),
               )}
             </motion.nav>
           </div>

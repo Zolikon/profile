@@ -4,6 +4,19 @@ import { useNavigate } from "react-router-dom";
 
 function AboutMe() {
   const navigate = useNavigate();
+
+  const STARTED_AT = 2014;
+  const TEAM_LEAD_SINCE = 2020;
+  const PEOPLE_MANAGEMENT_SINCE = 2020;
+
+  function currentYear() {
+    return new Date().getFullYear();
+  }
+
+  function yearsOfExperience(startedAt) {
+    return currentYear() - startedAt - 1;
+  }
+
   return (
     <div className="flex flex-col items-center justify-start gap-6 font-semibold text-center text-xs xl:text-xl w-full xl:w-3/4 h-full py-64 select-none">
       <div className="flex flex-col items-center justify-center gap-2">
@@ -14,9 +27,9 @@ function AboutMe() {
         <div className="flex flex-col py-4 gap-4 w-full items-center">
           <RotatingView
             elements={[
-              "Fullstack engineer with 10+ years of experience",
-              "4+ years of team/technical lead",
-              "4+ years of experience in people management",
+              `Fullstack engineer with ${yearsOfExperience(STARTED_AT)}+ years of experience`,
+              `${yearsOfExperience(TEAM_LEAD_SINCE)}+ years of team/technical lead`,
+              `${yearsOfExperience(PEOPLE_MANAGEMENT_SINCE)}+ years of experience in people management`,
             ]}
           />
           <div className="flex flex-col gap-2">
