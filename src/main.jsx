@@ -7,7 +7,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Portfolio from "./portfolio/Portfolio.jsx";
 import AnimateComponent from "./components/AnimateComponent.jsx";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
-import AboutMe from "./aboutme/AboutMe.jsx";
+import Home from "./aboutme/Home.jsx";
 import Skills from "./skills/Skills.jsx";
 import PageNotFound from "./components/PageNotFound.jsx";
 import MusicProject from "./portfolio/projects/MusicProject.jsx";
@@ -32,7 +32,7 @@ const router = createBrowserRouter([
         element: (
           <AnimateComponent key="home">
             <ProtectedRoute>
-              <AboutMe />
+              <Home />
             </ProtectedRoute>
           </AnimateComponent>
         ),
