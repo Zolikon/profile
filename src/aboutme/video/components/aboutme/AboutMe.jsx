@@ -25,7 +25,7 @@ export const AboutMe = () => {
         <h1 className={h1Style}>{`Engineering Manager with ${yearsOfExperience(
           PEOPLE_MANAGEMENT_SINCE,
         )}+ years of experience`}</h1>
-        <h1 className={h1Style}>{`Fullstack developer with ${STARTED_AT}+ years of experience`}</h1>
+        <h1 className={h1Style}>{`Fullstack developer with ${yearsOfExperience(STARTED_AT)}+ years of experience`}</h1>
         <h1 className={h1Style}>Technical Interviewer</h1>
         <h1 className={h1Style}>Meetup presenter</h1>
       </FloatIn>

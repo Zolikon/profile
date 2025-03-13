@@ -29,7 +29,7 @@ export const VideoMain = () => {
         presentation={flip({ direction: "from-bottom" })}
         timing={linearTiming({ durationInFrames: seconds(1.5) })}
       />
-      <TransitionSeries.Sequence durationInFrames={seconds(240)}>
+      <TransitionSeries.Sequence durationInFrames={seconds(1000)}>
         <VideoMenu />
       </TransitionSeries.Sequence>
     </TransitionSeries>

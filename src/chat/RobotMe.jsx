@@ -81,7 +81,6 @@ function RobotMe() {
                     submitQuestion();
                   }
                 }}
-                autoFocus
               />
               {!waitingForAnswer && currentMessage.length > 0 && (
                 <button

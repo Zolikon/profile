@@ -1,10 +1,15 @@
 import PropTypes from "prop-types";
+import { hoverDescription } from "./VideoMenu";
+import { useSignals } from "@preact/signals-react/runtime";
 
-function VideoMenuButton({ children, onClick }) {
+function VideoMenuButton({ children, description, onClick }) {
+  useSignals();
   return (
     <button
       onClick={onClick}
-      className=" w-1/4 h-1/3 rounded-2xl bg-light-side-from  dark:bg-dark-side-to text-white dark:text-white text-6xl p-2 flex items-center justify-center gap-1 hover:scale-105 transition-all"
+      onMouseEnter={() => (hoverDescription.value = description)}
+      onMouseLeave={() => (hoverDescription.value = "")}
+      className="w-1/4 h-full flex-grow rounded-2xl bg-gradient-to-b from-light-side-from to-light-side-to dark:from-dark-side-from dark:to-dark-side-to text-white dark:text-white text-6xl p-2 flex items-center justify-center gap-1 transition-all transform hover:scale-105 hover:shadow-2xl shadow-2xl"
     >
       {children}
     </button>
@@ -14,6 +19,7 @@ function VideoMenuButton({ children, onClick }) {
 VideoMenuButton.propTypes = {
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func.isRequired,
+  description: PropTypes.string.isRequired,
 };
 
 export default VideoMenuButton;
