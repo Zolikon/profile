@@ -12,6 +12,7 @@ function VideoMenu() {
 
   return (
     <AbsoluteFill className="flex flex-col justify-start">
+      <h1 className="text-6xl font-bold mt-24">What are you interested in?</h1>
       <div className="flex flex-row gap-10 items-center justify-center p-10 mt-[10%]  h-2/5">
         <VideoMenuButton onClick={() => navigate("/robotme")} description="Ask my AI about me">
           RobotMe

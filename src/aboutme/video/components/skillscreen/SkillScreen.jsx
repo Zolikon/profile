@@ -14,24 +14,24 @@ export const SkillScreen = () => {
       <Face stayDuration={seconds(2)} />
       <div className="flex flex-row flex-grow">
         <FloatIn from="left" lengthInFrames={fiveSeconds} delay={seconds(2)}>
-          <Skill mainSkill="Java" />
+          <Skill mainSkill="Java" icon="java" />
         </FloatIn>
         <FloatIn from="top" lengthInFrames={fiveSeconds} delay={seconds(4)}>
-          <Skill mainSkill="Javascript" />
+          <Skill mainSkill="Javascript" icon="javascript" />
         </FloatIn>
         <FloatIn from="right" lengthInFrames={fiveSeconds} delay={seconds(6)}>
-          <Skill mainSkill="Cloud" />
+          <Skill mainSkill="Cloud" icon="cloud" />
         </FloatIn>
       </div>
       <div className="flex flex-row flex-grow">
         <FloatIn from="left" lengthInFrames={fiveSeconds} delay={seconds(12)}>
-          <Skill mainSkill="Python" />
+          <Skill mainSkill="Python" icon="python" />
         </FloatIn>
         <FloatIn from="bottom" lengthInFrames={fiveSeconds} delay={seconds(10)}>
-          <Skill mainSkill="GenAI" />
+          <Skill mainSkill="GenAI" icon="ai" />
         </FloatIn>
         <FloatIn from="right" lengthInFrames={fiveSeconds} delay={seconds(8)}>
-          <Skill mainSkill="ReactJs" />
+          <Skill mainSkill="ReactJs" icon="react" />
         </FloatIn>
       </div>
     </AbsoluteFill>
