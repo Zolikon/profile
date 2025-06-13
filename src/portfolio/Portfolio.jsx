@@ -12,6 +12,13 @@ function Portfolio() {
       <ProjectCard name="TaleMage" description="AI-supported tale generator" image="/talemage_preview.png" />
       <ProjectCard name="Minesweeper" description="Classic minesweeper" image="/minesweeper_preview.png" />
       <ProjectCard name="Workdesk" description="Configuration collection" image="/workdesk_preview.png" />
+      <ProjectCard
+        name="Python
+        Fastskilling"
+        url_name="python-fastskilling"
+        description="Learning platform for kickstart Python programming skills"
+        image="/pythonfastskilling_preview.png"
+      />
     </div>
   );
 }

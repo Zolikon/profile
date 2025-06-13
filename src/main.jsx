@@ -22,6 +22,7 @@ import CareerJourney from "./career/CareerJourney.jsx";
 import RobotMe from "./chat/RobotMe.jsx";
 import WorkdeskProject from "./portfolio/projects/WorkdeskProject.jsx";
 import FlowGeneratorProject from "./portfolio/projects/FlowGeneratorProject.jsx";
+import PythonFastskillingProject from "./portfolio/projects/PythonFastskillingProject.jsx";
 
 const router = createBrowserRouter([
   {
@@ -173,6 +174,16 @@ const router = createBrowserRouter([
           <AnimateComponent key="flowgenerator_project">
             <ProtectedRoute>
               <FlowGeneratorProject />
+            </ProtectedRoute>
+          </AnimateComponent>
+        ),
+      },
+      {
+        path: "/projects/python-fastskilling",
+        element: (
+          <AnimateComponent key="pythonfastskilling_project">
+            <ProtectedRoute>
+              <PythonFastskillingProject />
             </ProtectedRoute>
           </AnimateComponent>
         ),

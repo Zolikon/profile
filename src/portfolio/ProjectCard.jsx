@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
-function ProjectCard({ name, description, image }) {
+function ProjectCard({ name, description, image, url_name }) {
   const [isHovered, setIsHovered] = useState(false);
 
   const variants = {
@@ -13,7 +13,7 @@ function ProjectCard({ name, description, image }) {
 
   return (
     <NavLink
-      to={name.toLowerCase().replace(" ", "")}
+      to={url_name || name.toLowerCase().replace(" ", "")}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -49,6 +49,7 @@ ProjectCard.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   image: PropTypes.string,
+  url_name: PropTypes.string,
 };
 
 export default ProjectCard;
